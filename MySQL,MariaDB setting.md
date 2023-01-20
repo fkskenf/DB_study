@@ -58,3 +58,5 @@ set password=password('root'); # MariaDB 10.4 버전 이상에서 사용가능�
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
 > MariaDB가 MySQL기반으로 둘다 사용가능한것으로 보임
+ ![image](https://user-images.githubusercontent.com/60438691/213624477-07158e29-4050-4390-8488-4cd5f7aed3ac.png)
+
