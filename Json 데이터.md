@@ -1,5 +1,6 @@
 # json_extract
-변수로 JSON 형식 문자열을 저장한 뒤 JSON_EXTRACT 로 특정 KEY 값에 접근 하는 쿼리
+- JSON_EXTRACT(컬럼명, '$[배열번호].Key명')
+- 변수로 JSON 형식 문자열을 저장한 뒤 JSON_EXTRACT 로 특정 KEY 값에 접근 하는 쿼리
 
 ```sql
 SET @json = '{
@@ -18,3 +19,6 @@ SELECT JSON_EXTRACT(Column_Name, '$.Key') FROM Table_Name -- 테이블 내의 JS
 
 SELECT JSON_UNQUOTE(JSON_EXTRACT(Column_Name, '$.Key')) FROM Table_Name -- 결과 값에서 "" 쌍따옴표 제거 후 조회
 ```
+
+# json_unquote
+- JSON_EXTRACT 이후 JSON_UNQUOTE(값); 을 사용해 ""를 뺀 값을 가져와주면 된다
