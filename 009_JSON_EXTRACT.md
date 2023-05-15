@@ -27,8 +27,6 @@ SELECT JSON_REPLACE(@json, '$.users[0].name', 'Hong');
 -- 첫 번째 유저 정보를 삭제 -- {"users": [{"age": 21, "name": "Lee", "country": "usa"},....생략...
 SELECT JSON_REMOVE(@json, '$.users[0]');
 ```
-
-
 ### 2. 응용 예제
 ```sql 
 SELECT status 
@@ -41,3 +39,5 @@ FROM t_data_json t2
 WHERE t2.no = 1793
 AND type = 'F')
 ```
+#### json_unquote
+- JSON_EXTRACT 이후 JSON_UNQUOTE(값); 을 사용해 ""를 뺀 값을 가져와주면 된다
